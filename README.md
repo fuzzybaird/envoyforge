@@ -1,15 +1,12 @@
-Composer Library Template
+Envoy Forge API
 =========================
+This library was build in the hopes to streamline feature branch CI/CD deployment for Envoy. It will have a partner library that turns Envoy into a UI that lets you track the status of builds and features as they move along your custom pipelines.
 
-If you are trying to create a new PHP Composer library, whether it will be going to submitted to packagist.org or just in your Github account, this template of files will surely help you make the process a lot easier and faster.
-
-Features
---------
-
-* PSR-4 autoloading compliant structure
-* Unit-Testing with PHPUnit
-* Comprehensive Guides and tutorial
-* Easy to use to any framework or even a plain php file
+```php
+use Fuzzybaird\Envoyforge\ForgeApiFactory as Forge;
 
 
-I encourage that you put more information on this readme file instead of leaving it as is. See [http://www.darwinbiler.com/designing-and-making-the-readme-file-for-your-github-repository/](How to make a README file) for more info.
+$forge = Forge::init(FORGE_API_KEY);
+$response = $forge->create_site('SERVER_KEY', 'myfeature.dev.mysite.io', 'php', '/');
+$encrypt = $forge->lets_encrypt('SERVER_KEY',$response->site->id, $response->site->name);
+```
