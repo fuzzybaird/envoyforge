@@ -56,7 +56,6 @@ class ForgeApi
 		while ($status === 'installing') {
 			sleep(4);
 			$result = $this->show_cert($server_id, $site_id, $create_response->certificate->id);
-			print_r($result);
 			$status = $result->certificate->status;
 		}
 		return $result;
