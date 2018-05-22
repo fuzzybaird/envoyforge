@@ -4,6 +4,11 @@
 			convertNoticesToExceptions="true"
 			convertWarningsToExceptions="true"
 			stopOnFailure="true">
+			<filter>
+				<whitelist processUncoveredFilesFromWhitelist="true">
+					<directory suffix=".php">src</directory>
+				</whitelist>
+			</filter>
 			<testsuites>
 				<testsuite name="Unit Tests">
 					<directory>tests</directory>
