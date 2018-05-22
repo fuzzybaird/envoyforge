@@ -10,4 +10,4 @@ install:
   # install dependencies using system provided composer binary
   - composer install $flags
 after_success:
-  - travis_retry php vendor/bin/php-coveralls
+  - bash <(curl -s https://codecov.io/bash)
