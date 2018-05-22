@@ -1,0 +1,26 @@
+{
+    "name": "fuzzybaird/envoyforge",
+    "description": "Forge API integration for support of continuos delivery and deployment & feature branching.",
+    "keywords": ["artifact", "promotion", "forge", "api", "laravel"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Eli Baird",
+            "email": "elibaird1@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.0",
+        "php-di/php-di": "^6.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "7.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Fuzzybaird\\Envoyforge\\": "src/"
+        }
+    }
+}
