@@ -15,11 +15,7 @@ function sleep()
 }
 class ForgeApiTest extends \PHPUnit\Framework\TestCase
 {
-	// function setUp()
-	// {
-
-
-	// }
+	public $key = 'alksdjkjsdlkj';
 
 	/** 
 	 * @test 
